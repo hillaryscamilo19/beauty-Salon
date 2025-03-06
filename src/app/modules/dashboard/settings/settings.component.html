@@ -1,0 +1,41 @@
+<div class="settings-container">
+  <header class="settings-header">
+    <h2>Settings</h2>
+    <div class="user-avatar">
+      <img [src]="authService.currentUserValue?.photoUrl || 'assets/default-avatar.jpg'" alt="User avatar">
+    </div>
+  </header>
+
+  <div class="settings-list">
+    <div class="setting-item">
+      <span>Account Info</span>
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="setting-item">
+      <span>Language</span>
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="setting-item">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="darkMode" (change)="toggleDarkMode()">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="setting-item">
+      <span>Help Center</span>
+    </div>
+    <div class="setting-item">
+      <span>Privacy Policy</span>
+    </div>
+    <div class="setting-item">
+      <span>Recommendations</span>
+    </div>
+  </div>
+
+  <button class="sign-out-button" (click)="signOut()">Sign-out</button>
+</div>
+
+<nav class="bottom-nav">
+  <!-- Bottom navigation similar to home component -->
+</nav>

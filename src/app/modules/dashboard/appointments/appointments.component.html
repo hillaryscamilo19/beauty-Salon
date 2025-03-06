@@ -1,0 +1,51 @@
+<div class="appointments-container">
+  <header class="appointments-header">
+    <button class="back-button">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h2>Appointment</h2>
+    <div class="month-display">{{selectedDate | date:'MMMM'}}</div>
+  </header>
+
+  <div class="calendar">
+    <!-- Aquí iría un componente de calendario. Por simplicidad, usaremos un placeholder -->
+    <div class="calendar-placeholder">
+      Calendar Component (Days of the month)
+    </div>
+  </div>
+
+  <div class="time-slots">
+    <div class="slot-section">
+      <h3>Morning</h3>
+      <div class="slots">
+        <button *ngFor="let slot of morningSlots" class="time-slot">{{slot}}</button>
+      </div>
+    </div>
+    <div class="slot-section">
+      <h3>Afternoon</h3>
+      <div class="slots">
+        <button *ngFor="let slot of afternoonSlots" class="time-slot">{{slot}}</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="stylist-selection">
+    <h3>Choose Hair Stylist</h3>
+    <div class="stylist-list">
+      <button *ngFor="let stylist of stylists" class="stylist-button">
+        <img [src]="stylist.imageUrl" [alt]="stylist.name">
+      </button>
+    </div>
+  </div>
+
+  <div class="service-info">
+    <span>{{selectedService}}</span>
+    <span>${{servicePrice}}</span>
+  </div>
+
+  <button class="book-button" (click)="bookAppointment()">Book Appointment</button>
+</div>
+
+<nav class="bottom-nav">
+  <!-- Bottom navigation similar to home component -->
+</nav>
