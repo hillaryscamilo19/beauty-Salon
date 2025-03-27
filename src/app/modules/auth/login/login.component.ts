@@ -19,7 +19,6 @@ export class LoginComponent {
     private router: Router,
     private authService: AuthServiceService
   ) {
-    // Crear el formulario
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -27,19 +26,15 @@ export class LoginComponent {
   }
 
   ngOnInit() {
-    // Si el usuario ya está logueado, redirigir al dashboard
     if (this.authService.currentUserValue) {
       this.router.navigate(['/dashboard']);
     }
   }
 
-  // Getter para acceder fácilmente a los campos del formulario
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-
-    // Detener si el formulario es inválido
     if (this.loginForm.invalid) {
       return;
     }
