@@ -16,6 +16,8 @@ import { LoginComponent } from './modules/auth/login/login.component';
 import { AppointmentsComponent } from './modules/dashboard/appointments/appointments.component';
 import { MessagingComponent } from './modules/dashboard/messaging/messaging.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SalonListComponent } from './modules/dashboard/salon-list/salon-list.component';
+import { CategoariasComponent } from './modules/dashboard/categorias/categoarias/categoarias.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ButtonComponent,
     ModalComponent,
     MessagingComponent,
+    SalonListComponent,
+    CategoariasComponent,
 
   ],
   imports: [
