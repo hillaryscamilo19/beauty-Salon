@@ -1,13 +1,16 @@
 import { User } from './use.models';
 
 export interface Appointment {
-  id: number;
-  date: Date;
-  time: string;
-  client: User;
-  stylist: User;
-  service: Service;
-  status: 'pending' | 'confirmed' | 'completed' | 'cancelled';
+  id?: string
+  userId: string
+  specialistId: string
+  serviceId: string
+  date: string
+  time: string
+  status: "pending" | "confirmed" | "completed" | "cancelled"
+  price: number
+  serviceName?: string
+  specialistName?: string
 }
 
 export interface Service {
