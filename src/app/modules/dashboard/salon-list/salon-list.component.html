@@ -1,11 +1,24 @@
-<div class="">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+<div class="specialists-container">
+  <h2 class="specialists-title">Hair Specialist</h2>
+
+  <div class="specialists-list">
+    <div class="specialist-card" *ngFor="let specialist of specialists">
+      <div class="specialist-image">
+        <img src="specialist.imageUrl" [alt]="specialist.name">
+      </div>
+      <div class="specialist-info">
+        <h3 class="specialist-name">{{specialist.name}}</h3>
+        <div class="specialist-rating">
+          <span class="star" *ngFor="let star of [1, 2, 3]" [class.filled]="star <= specialist.rating">
+
+          </span>
+        </div>
+        <div class="specialist-contact">
+
+          <span>{{specialist.phone}}</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

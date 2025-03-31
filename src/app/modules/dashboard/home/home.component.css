@@ -1,23 +1,22 @@
 .home-container {
   padding: 1rem;
-  padding-bottom: 70px;
-  background-color: rgb(255 255 255);
+  padding-bottom: 3px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .container-main {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
+    overflow-y: scroll;
   align-items: center;
   width: 100%;
-  height: 100%;
-  background-color: rgb(255 255 255);
   flex-direction: column;
 }
 
 .container-secondary {
-  display: flex;
-      width: 100%;
-      height: 100px;
+      display: flex;
       background-color: rgb(255 255 255);
       align-content: space-around;
       justify-content: center;

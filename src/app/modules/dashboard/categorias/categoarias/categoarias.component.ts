@@ -9,32 +9,32 @@ export class CategoariasComponent {
   categories: Category[] = [
     {
       id: "hair-style",
-      name: "Hair Style",
+      name: "",
       image: "assets/img/HairStyles.png",
     },
     {
       id: "hair-spa",
-      name: "Hair Spa",
+      name: "",
       image: "assets/img/HaisSpa.png",
     },
     {
       id: "shampoo",
-      name: "Shampoo",
+      name: "",
       image: "assets/img/Shampoo.png",
     },
     {
       id: "hair-dryer",
-      name: "Hair dryer",
+      name: "",
       image: "assets/img/HairDryer.png",
     },
     {
       id: "facial",
-      name: "Facial",
+      name: "",
       image: "assets/img/Facial.png",
     },
     {
       id: "makeup",
-      name: "Makeup",
+      name: "",
       image: "assets/img/makeup.png",
     },
   ]
@@ -49,7 +49,7 @@ export class CategoariasComponent {
   }
 
 
-  
+
 
 }
 interface Category {

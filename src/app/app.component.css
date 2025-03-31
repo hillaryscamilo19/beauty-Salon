@@ -38,8 +38,23 @@
   }
 }
 
+.butoon{
+
+
+
+}
+
+.nav-links{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+
 .main-content {
-  flex: 1;
-  padding: 2rem;
-  background-color: #f8f9fa;
+    flex: 8;
+    padding: 0rem;
+    background-color: rgb(255 255 255);
 }

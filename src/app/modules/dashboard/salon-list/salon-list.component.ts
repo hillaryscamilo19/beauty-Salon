@@ -8,18 +8,40 @@ import { SalonService } from 'src/app/services/salon/Salon.service';
   styleUrls: ['./salon-list.component.css']
 })
 export class SalonListComponent implements OnInit {
-  salons: Salon[] = [];
+  specialists: Specialist[] = [
+    {
+      id: 1,
+      name: "Doe John",
+      imageUrl: '../../../../assets/img/specialist1.jpg',
+      rating: 2,
+      phone: "+732 8888 111",
+    },
+    {
+      id: 2,
+      name: "Lucy",
+      imageUrl: "../../../../assets/img/specialist2.jpg",
+      rating: 2,
+      phone: "+732 8888 111",
+    },
+    {
+      id: 3,
+      name: "Laila",
+      imageUrl: "assets/specialists/specialist3.jpg",
+      rating: 3,
+      phone: "+732 8888 111",
+    },
+  ]
 
-  constructor(private salonService: SalonService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.loadSalons();
-  }
+  ngOnInit(): void {}
+}
 
-  loadSalons() {
-    this.salonService.getSalons().subscribe(
-      salons => this.salons = salons
-    );
-  }
 
+interface Specialist {
+  id: number
+  name: string
+  imageUrl: string
+  rating: number
+  phone: string
 }
