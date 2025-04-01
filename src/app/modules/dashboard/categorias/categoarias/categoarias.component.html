@@ -1,10 +1,9 @@
-<p>categoarias works!</p>
 <div class="categories-container">
     <h2 class="categories-title">Categories</h2>
-    
+
     <div class="categories-grid">
-      <div *ngFor="let category of categories" 
-           class="category-card" 
+      <div *ngFor="let category of categories"
+           class="category-card"
            (click)="selectCategory(category.id)">
         <div class="category-image-container">
           <img [src]="category.image" [alt]="category.name" class="category-image">
@@ -14,5 +13,9 @@
       </div>
     </div>
   </div>
-  
-  
+
+<div class="container-Specialist">
+  <h2 class="categories-title">Hair Specialist </h2>
+</div>
+<app-salon-list></app-salon-list>
+
