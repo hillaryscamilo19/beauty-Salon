@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card{
+    margin-top: 18px;
+    width: 386px;
+    background-color: #ffffff;
+    border-color: #1d21212e;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    border-color: azure;
+    justify-content: space-evenly;
+    
+}
+
+.icono{
+    margin: 6px;
+}
+
+.username{
+    display: flex;
+    margin-top: 34px;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-around;
+    justify-content: right;
+}
+
+.text{
+    font-weight: 300;
+    color: #121212;
+    font-size: 33px;
+    padding-left: 17px;
+}
+
+.text1{
+    font-weight: 300;
+    color: #12121294;
+    font-size: 17px;
+    padding-left: 61px;
+}
+
+.colorText{
+    color: rgb(197, 34, 34);
+}
+
+
+.Logo{
+    width: 40px;
+}
