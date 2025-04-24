@@ -1,10 +1,22 @@
 <div class="app-container">
   <!-- Navbar solo se muestra si el usuario está autenticado -->
-  <nav class="navbar" *ngIf="isLoggedIn">
-    <div class="nav-brand">
-      <img src="../assets/img/logoHome.png" alt="Logo" class="Logo">
-    </div>
-    <div>
+  <nav class="" *ngIf="isLoggedIn">
+    <div className="min-h-screen bg-background">
+      <header className="border-b">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img src="../assets/img/logoHome.png" alt="Logo" class="Logo">
+            <div>
+              <i class="bi bi-people-fill"></i>
+            </div>
+          </div>
+          <nav className="hidden md:flex items-center gap-6">
+          </nav>
+          <div className="flex items-center gap-4">
+    
+          </div>
+        </div>
+      </header>
     </div>
   </nav>
   <!-- Contenedor principal para el router-outlet -->
@@ -12,3 +24,4 @@
     <router-outlet></router-outlet>
   </main>
 </div>
+
