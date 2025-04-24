@@ -23,7 +23,7 @@ export class AuthServiceService {
   }
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post<any>(`${enviroment.api}/api/auth/login`, { email, password })
+    return this.http.post<any>(`${enviroment.api}/api/api/auth/login`, { email, password })
       .pipe(map(user => {
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
@@ -32,7 +32,7 @@ export class AuthServiceService {
   }
 
   register(userData: Partial<User>): Observable<any> {
-    return this.http.post(`${enviroment.api}/api/auth/register`, userData);
+    return this.http.post(`${enviroment.api}/api/api/auth/register`, userData);
   }
 
   logout() {
