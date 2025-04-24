@@ -1,40 +1,44 @@
 .home-container {
-  padding: 1rem;
   padding-bottom: 3px;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 .container-main {
   display: flex;
-  justify-content: center;
-  overflow-x: hidden;
-    overflow-y: scroll;
-  align-items: center;
-  width: 100%;
+  justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
+  background-color: rgb(130 0 255 / 8%);
+  max-width: 100%;
+  height: 267px;
+  flex-wrap: nowrap;
 }
+
+
+.iconoUser{
+  display: flex;
+  justify-content: end;
+}
+
 
 .container-secondary {
-      display: flex;
-      background-color: rgb(255 255 255);
-      align-content: space-around;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      flex-direction: row;
-
+  display: flex;
+  background-color: rgb(255 255 255);
+  align-content: space-around;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.text{
+.text {
   font-family: fangsong;
   color: #111010;
 }
-.Text1{
+.Text1 {
   font-family: fangsong;
   color: #ff4757;
 }
-
 
 .icono {
   width: 20px;
