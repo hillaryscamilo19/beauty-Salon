@@ -1,21 +1,12 @@
 <div class="categories-container">
-    <h2 class="categories-title">Categories</h2>
-
-    <div class="categories-grid">
-      <div *ngFor="let category of categories"
-           class="category-card"
-           (click)="selectCategory(category.id)">
-        <div class="category-image-container">
-          <img [src]="category.image" [alt]="category.name" class="category-image">
-          <div class="category-overlay"></div>
-          <h3 class="category-name">{{ category.name }}</h3>
+    <h2 class="categories-title">Services</h2>
+    <div class="Card-container">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
         </div>
       </div>
     </div>
-  </div>
-
-<div class="container-Specialist">
-  <h2 class="categories-title">Hair Specialist </h2>
+    <div class="">
+    </div>
 </div>
-<app-salon-list></app-salon-list>
 

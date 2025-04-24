@@ -14,12 +14,10 @@
   flex-wrap: nowrap;
 }
 
-
-.iconoUser{
+.iconoUser {
   display: flex;
   justify-content: end;
 }
-
 
 .container-secondary {
   display: flex;

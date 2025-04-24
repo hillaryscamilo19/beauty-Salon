@@ -1,20 +1,16 @@
 <div class="app-container">
   <!-- Navbar solo se muestra si el usuario está autenticado -->
-  <nav class="" *ngIf="isLoggedIn">
-    <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src="../assets/img/logoHome.png" alt="Logo" class="Logo">
-            <div>
-              <i class="bi bi-people-fill"></i>
-            </div>
+  <nav clas="" *ngIf="isLoggedIn">
+    <div class="containerer min-h-screen bg-background">
+      <header class="border-b">
+        <div class="mx-auto px-4 py-4 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+              <div>
+                <img src="../assets/img/logoHome.png" alt="Logo" class="Logo" />
+              </div>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
-          </nav>
-          <div className="flex items-center gap-4">
-    
-          </div>
+          <nav class="hidden md:flex items-center gap-6"></nav>
+          <div class="flex items-center gap-4"></div>
         </div>
       </header>
     </div>
@@ -23,5 +19,8 @@
   <main class="main-content">
     <router-outlet></router-outlet>
   </main>
-</div>
 
+  <footer class="app-footer">
+    <p>&copy; {{ 2025 }} Todos los derechos reservados , Hillarys Camilo❤️</p>
+  </footer>
+</div>
