@@ -1,26 +1,36 @@
 <div class="app-container">
-  <!-- Navbar solo se muestra si el usuario está autenticado -->
-  <nav clas="" *ngIf="isLoggedIn">
-    <div class="containerer min-h-screen bg-background">
+  <nav *ngIf="isLoggedIn">
+    <div class="bg-background">
       <header class="border-b">
-        <div class="mx-auto px-4 py-4 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-              <div>
-                <img src="../assets/img/logoHome.png" alt="Logo" class="Logo" />
-              </div>
+        <div class="containerer mx-auto px-4 py-4 flex items-center justify-between">
+          
+          <!-- LOGO + TEXTO + icono juntos -->
+           <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scissors-icon lucide-scissors"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></div>
+
+          <div class="flex items-center gap-2 title">
+          <span>BeautySalonHillarys</span>
           </div>
-          <nav class="hidden md:flex items-center gap-6"></nav>
-          <div class="flex items-center gap-4"></div>
+
+          <!-- BOTÓN aparte -->
+          <div>
+            <button class="login-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span>Sign In</span>
+            </button>
+          </div>
+
         </div>
       </header>
     </div>
   </nav>
-  <!-- Contenedor principal para el router-outlet -->
   <main class="main-content">
     <router-outlet></router-outlet>
   </main>
 
   <footer class="app-footer">
-    <p>&copy; {{ 2025 }} Todos los derechos reservados , Hillarys Camilo❤️</p>
+    <p>&copy; {{ 2025 }} Todos los derechos reservados, Hillarys Camilo❤️</p>
   </footer>
 </div>

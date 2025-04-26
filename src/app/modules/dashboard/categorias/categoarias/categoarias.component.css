@@ -1,73 +1,88 @@
-.categories-container {
-  padding: 16px;
-  background-color: rgb(255 255 255);
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
 }
 
-.container-Specialist {
-  color: #333;
-  padding: 16px;
-  overflow-x: hidden;
-  background-color: rgb(255 255 255);
-}
-
-.categories-title {
-  font-size: 25px;
+.title h2 {
+  font-size: 32px;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #333;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
-.categories-grid {
+.container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.category-card {
+.Card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background-color: #ffffff;
   border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
-}
-
-.category-card-container{
-  position: relative;
-  width: 100%;
-  height: 120px;
-}
-
-.category-image {
-  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  object-fit: cover;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 320px;
 }
 
-.category-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.4)
-  );
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.category-name {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  color: white;
+.card-body {
+  text-align: justify;
+}
+
+.card-body span {
+  display: block;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.card-body span:first-child {
   font-size: 18px;
+  font-weight: 600;
+}
+
+.card-body span:nth-child(2) {
+  font-size: 14px;
+  color: #555;
+  min-height: 60px;
+}
+
+.card-body span:last-child {
+  font-weight: bold;
+  font-size: 16px;
+  color: #111;
+}
+
+.card button {
+  width: 100%;
+  background-color: #f7f2f2;
+  color: #0c0b0b;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
   font-weight: 500;
-  margin: 0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+  background-color: #9c989860;
 }

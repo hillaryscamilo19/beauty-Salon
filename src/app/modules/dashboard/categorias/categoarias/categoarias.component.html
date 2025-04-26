@@ -1,12 +1,28 @@
-<div class="categories-container">
-    <h2 class="categories-title">Services</h2>
-    <div class="Card-container">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
+<div class="main-container">
+  <div class="title">
+    <h2>Services</h2>
+  </div>
+
+  <div class="container" style="margin: 0%">
+    <div
+      class="Card-container"
+      *ngFor="let categorie of categoriaFlter"
+    >
+      <div class="card">
+        <div class="card-body titley">
+          <span (click)="selectCategory(categoryId)">{{
+            categorie.nombre
+          }}</span><br>
+          <span (click)="selectCategory(categoryId)">{{
+            categorie.descripcion
+          }}</span><br>
+          <span (click)="selectCategory(categoryId)">{{'$'}} {{categorie.Precio}}</span>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-dark">Book Your Appointment</button>
         </div>
       </div>
     </div>
-    <div class="">
-    </div>
+  </div>
 </div>
-

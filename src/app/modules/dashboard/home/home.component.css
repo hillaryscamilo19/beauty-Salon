@@ -5,13 +5,13 @@
 
 .container-main {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   background-color: rgb(130 0 255 / 8%);
-  max-width: 100%;
-  height: 267px;
-  flex-wrap: nowrap;
+  max-width: 106%;
+  height: 406px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .iconoUser {
@@ -20,13 +20,7 @@
 }
 
 .container-secondary {
-  display: flex;
   background-color: rgb(255 255 255);
-  align-content: space-around;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
 
 .text {
