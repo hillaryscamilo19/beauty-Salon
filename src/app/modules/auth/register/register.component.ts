@@ -24,37 +24,43 @@ export class RegisterComponent {
         password: ['', Validators.required]
       });
     }
-  
+
     ngOnInit() {
       if (this.authService.currentUserValue) {
         this.router.navigate(['/dashboard']);
       }
     }
-  
+
     get f() { return this.RegisterForm.controls; }
-  
+
     onSubmit() {
       this.submitted = true;
       if (this.RegisterForm.invalid) {
         return;
       }
-  
+
       this.loading = true;
-      this.authService.login(this.f['email'].value, this.f['password'].value)
+      const userData = {
+        name: this.f['name'].value,
+        email: this.f['email'].value,
+        password: this.f['password'].value
+      };
+      this.authService.register(userData)
         .subscribe({
           next: () => {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/login']);
           },
           error: (error: { message: string; }) => {
-            this.error = error.message || 'Login failed';
+            this.error = error.message || 'Registration failed';
             this.loading = false;
           }
         });
     }
-  
+
+
     goToRegister() {
       this.router.navigate(['/register']);
     }
-  
+
   }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthServiceService } from './services/servicesAuth/auth-service.service';
 import { Router } from '@angular/router';
+import { User } from './models/interfaces/use.models';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  userName: string | null = null;
   isLoggedIn = false;
 
   constructor(
-    private authService: AuthServiceService,
+    public authService: AuthServiceService,
     private router: Router
   ) {}
 
   ngOnInit() {
-    this.authService.currentUser.subscribe(
-      user => {
-        this.isLoggedIn = !!user;
-      }
-    );
+    this.authService.currentUser.subscribe((user: User | null) => {
+      this.userName = user?.name || null;
+      this.isLoggedIn = !!user;
+    });
+
   }
 
   logout() {

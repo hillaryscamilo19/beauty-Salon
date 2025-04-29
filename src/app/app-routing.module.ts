@@ -13,7 +13,7 @@ import { SettingsComponent } from './modules/dashboard/settings/settings.compone
 import { PaymentComponent } from './modules/dashboard/payment/payment.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {
@@ -31,7 +31,7 @@ const routes: Routes = [
     component: PaymentComponent,
     canActivate: [AuthGuard]
   },
-  { path: '**', redirectTo: '/dashboard' }
+  { path: '**', component: NotfoundComponent } // o redirectTo: '/login'
 ];
 
 @NgModule({

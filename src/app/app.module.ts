@@ -41,7 +41,7 @@ import { CategoariasComponent } from './modules/dashboard/categorias/categoarias
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,  // Asegúrate de que esta línea esté presente
+    ReactiveFormsModule,
     FormsModule,
   ],
   providers: [],

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 import { CategoryService } from 'src/app/services/Category/Category.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { CategoryService } from 'src/app/services/Category/Category.service';
 export class CategoariasComponent {
   categoriaFlter?: any[] = [];
   categoryId!: string;
+  settings!: '/settings'
   constructor(private servicesContrato: CategoryService) {}
 
   ngOnInit(): void {

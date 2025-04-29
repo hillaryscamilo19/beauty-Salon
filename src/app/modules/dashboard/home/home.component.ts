@@ -23,7 +23,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.loadCategories();
-    this.loadStylists();
+    //this.loadStylists();
     this.getUserName();
   }
 
@@ -33,11 +33,11 @@ export class HomeComponent {
     );
   }
 
-  private loadStylists() {
-    this.stylistService.getTopStylists().subscribe(
-      stylists => this.stylists = stylists
-    );
-  }
+  //private loadStylists() {
+    //this.stylistService.getTopStylists().subscribe(
+      //stylists => this.stylists = stylists
+    //);
+  //}
 
   private getUserName() {
     const user = this.authService.currentUserValue;
