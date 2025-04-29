@@ -18,8 +18,9 @@ export class AppointmentServiceService {
     return this.http.get<Appointment>(`${enviroment.api}/appointments/${id}`);
   }
 
-  createAppointment(appointment: Partial<Appointment>): Observable<Appointment> {
+  createAppointment(appointment: Appointment): Observable<any> {
     return this.http.post<Appointment>(`${enviroment.api}/appointments`, appointment);
+
   }
 
   updateAppointment(id: number, appointment: Partial<Appointment>): Observable<Appointment> {

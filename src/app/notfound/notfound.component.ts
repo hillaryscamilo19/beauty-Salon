@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class NotfoundComponent {
   constructor(private titleService: Title) {
-    this.titleService.setTitle('HCD - Not Found');
+    this.titleService.setTitle('Beauty Salon App - Not Found');
   }
 
 }

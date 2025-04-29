@@ -1,11 +1,12 @@
 .containerer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.title{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: small;
+.title {
+  font-family: "fangsong";
+  font-size: 171%;
 }
 
 .login-button {
@@ -30,7 +31,6 @@
   width: 20px;
   height: 20px;
 }
-
 
 .main-content {
   flex: 8;

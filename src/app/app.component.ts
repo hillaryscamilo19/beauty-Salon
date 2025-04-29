@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthServiceService } from './services/servicesAuth/auth-service.service';
 import { Router } from '@angular/router';
 import { User } from './models/interfaces/use.models';
@@ -8,7 +8,7 @@ import { User } from './models/interfaces/use.models';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit{
   userName: string | null = null;
   isLoggedIn = false;
 
@@ -20,9 +20,12 @@ export class AppComponent {
   ngOnInit() {
     this.authService.currentUser.subscribe((user: User | null) => {
       this.userName = user?.name || null;
-      this.isLoggedIn = !!user;
-    });
 
+
+      this.isLoggedIn = !!user;
+      console.log('Nombre del usuario:', this.userName);
+      console.log('¿Está logueado?', this.isLoggedIn);
+    });
   }
 
   logout() {

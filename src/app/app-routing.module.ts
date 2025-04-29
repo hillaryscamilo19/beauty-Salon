@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   {
     path: 'dashboard',
+    component: HomeComponent, // ¡Aquí es clave!
     canActivate: [AuthGuard],
     children: [
       { path: '', component: HomeComponent },

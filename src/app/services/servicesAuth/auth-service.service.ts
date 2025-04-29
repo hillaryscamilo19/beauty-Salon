@@ -12,24 +12,28 @@ export class AuthServiceService {
   public currentUser: Observable<User | null>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<User | null>(
-      JSON.parse(localStorage.getItem('currentUser') || 'null')
-    );
+    const userFromStorage = JSON.parse(localStorage.getItem('currentUser') || 'null');
+    console.log('Usuario cargado desde localStorage:', userFromStorage);
+    this.currentUserSubject = new BehaviorSubject<User | null>(userFromStorage);
     this.currentUser = this.currentUserSubject.asObservable();
   }
-
+  
   public get currentUserValue(): User | null {
     return this.currentUserSubject.value;
   }
-
   login(email: string, password: string): Observable<any> {
     return this.http.post<any>(`${enviroment.api}auth/login`, { email, password })
-      .pipe(map(user => {
+      .pipe(map(response => {
+        const user = {
+          ...response.user,
+          token: response.token
+        };
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
         return user;
       }));
   }
+  
 
   register(userData: Partial<User>): Observable<any> {
     return this.http.post(`${enviroment.api}auth/register`, userData);

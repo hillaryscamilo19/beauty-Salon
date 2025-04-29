@@ -1,0 +1,13 @@
+<!-- dashboard-layout.component.html -->
+<nav *ngIf="isLoggedIn">…tu navbar…</nav>
+
+<div class="home-container">
+  <!-- aquí solo el contenedor principal de layout -->
+  <aside>…tu menú lateral…</aside>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<footer class="app-footer">…</footer>

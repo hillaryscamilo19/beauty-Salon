@@ -1,16 +1,13 @@
 import { User } from './use.models';
 
 export interface Appointment {
-  id?: string
-  userId: string
-  specialistId: string
-  serviceId: string
-  date: string
-  time: string
-  status: "pending" | "confirmed" | "completed" | "cancelled"
-  price: number
-  serviceName?: string
-  specialistName?: string
+  client: string;
+  employee: string;
+  service: string;
+  date: string;     // formato ISO (2025-04-29)
+  time: string;     // ej: "10:00 AM"
+  status?: string;
+  notes?: string;
 }
 
 export interface Service {
