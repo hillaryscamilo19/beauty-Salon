@@ -18,13 +18,12 @@ export class AppointmentServiceService {
     return this.http.get<Appointment>(`${enviroment.api}/appointments/${id}`);
   }
 
-  createAppointment(appointment: Appointment): Observable<any> {
-    return this.http.post<Appointment>(`${enviroment.api}/appointments`, appointment);
-
+  createAppointment(data: any): Observable<any> {
+    return this.http.post(`${enviroment.api}api/appointments/`, data);
   }
 
   updateAppointment(id: number, appointment: Partial<Appointment>): Observable<Appointment> {
-    return this.http.put<Appointment>(`${enviroment.api}/appointments/${id}`, appointment);
+    return this.http.put<Appointment>(`${enviroment.api}api/appointments/${id}`, appointment);
   }
 
   deleteAppointment(id: number): Observable<void> {

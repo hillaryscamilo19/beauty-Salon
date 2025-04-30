@@ -21,7 +21,7 @@ const routes: Routes = [
     component: HomeComponent, // ¡Aquí es clave!
     canActivate: [AuthGuard],
     children: [
-      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'appointments', component: AppointmentsComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'settings', component: SettingsComponent }

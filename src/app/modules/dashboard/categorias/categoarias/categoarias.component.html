@@ -24,11 +24,9 @@
           <button
             type="button"
             class="btn btn-dark"
-            [routerLink]="['/dashboard/appointments']"
-            [queryParams]="{
-              serviceId: categorie._id,
-              price: categorie.Precio
-            }"
+            data-bs-toggle="modal"
+            data-bs-target="#appointmentModal"
+            (click)="openModal(categorie)"
           >
             Book Your Appointment
           </button>
@@ -36,4 +34,81 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal de Agendar Cita -->
+  <form [formGroup]="appointmentForm" (ngSubmit)="submitAppointment()">
+    <div class="modal-body">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="client" class="form-label">Cliente:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="client"
+            [value]="userFullName"
+            readonly
+          />
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-6">
+            <label for="employee" class="form-label">Empleado:</label>
+            <select
+              class="form-select"
+              id="employee"
+              formControlName="employee"
+              required
+            >
+              <option value="" disabled selected>Selecciona un empleado</option>
+              <option *ngFor="let emp of employees" [value]="emp._id">
+                {{ emp.name }} - {{ emp.role || "Sin rol" }}
+              </option>
+            </select>
+          </div>
+        </div>
+ 
+        <div class="col-md-6">
+          <label for="date" class="form-label">Fecha:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            formControlName="date"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="time" class="form-label">Hora:</label>
+          <input
+            type="time"
+            class="form-control"
+            id="time"
+            formControlName="time"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="notes" class="form-label">Notas:</label>
+          <textarea
+            class="form-control"
+            id="notes"
+            formControlName="notes"
+            rows="2"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        Cancelar
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="appointmentForm.invalid"
+      >
+        Agendar
+      </button>
+    </div>
+  </form>
 </div>

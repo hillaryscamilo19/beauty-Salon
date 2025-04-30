@@ -1,29 +1,32 @@
-<form [formGroup]="appointmentForm" (ngSubmit)="submitAppointment()">
-  <label>Client ID:</label>
-  <input formControlName="client" type="text" />
+<form class="container mt-4">
+  <div class="row g-3 align-items-center">
+    <div class="col-md-2">
+      <label for="clientId" class="form-label">Client ID:</label>
+      <input type="text" id="clientId" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label for="employeeId" class="form-label">Employee ID:</label>
+      <input type="text" id="employeeId" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label for="serviceId" class="form-label">Service ID:</label>
+      <input type="text" id="serviceId" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label for="date" class="form-label">Date:</label>
+      <input type="date" id="date" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label for="time" class="form-label">Time:</label>
+      <input type="time" id="time" class="form-control">
+    </div>
+    <div class="col-md-2">
+      <label for="notes" class="form-label">Notes:</label>
+      <input type="text" id="notes" class="form-control">
+    </div>
+  </div>
 
-  <label>Employee ID:</label>
-  <input formControlName="employee" type="text" />
-
-  <label>Service ID:</label>
-  <input formControlName="service" type="text" />
-
-  <label>Date:</label>
-  <input formControlName="date" type="date" />
-
-  <label>Time:</label>
-  <select formControlName="time">
-    <option>9:00 AM</option>
-    <option>10:00 AM</option>
-    <option>11:00 AM</option>
-    <option>1:00 PM</option>
-    <option>2:00 PM</option>
-    <option>3:00 PM</option>
-    <option>4:00 PM</option>
-  </select>
-
-  <label>Notes:</label>
-  <textarea formControlName="notes"></textarea>
-
-  <button type="submit">Book Appointment</button>
+  <div class="mt-3 text-end">
+    <button type="submit" class="btn btn-primary">Book Appointment</button>
+  </div>
 </form>

@@ -18,9 +18,6 @@ import { MessagingComponent } from './modules/dashboard/messaging/messaging.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SalonListComponent } from './modules/dashboard/salon-list/salon-list.component';
 import { CategoariasComponent } from './modules/dashboard/categorias/categoarias/categoarias.component';
-import { DashboardLayoutComponent } from './modules/dashboard/dashboard/dashboard-layout/dashboard-layout.component';
-import { DashboardHomeComponent } from './modules/dashboard/dashboard/dashboard-home/dashboard-home.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,8 +34,6 @@ import { DashboardHomeComponent } from './modules/dashboard/dashboard/dashboard-
     MessagingComponent,
     SalonListComponent,
     CategoariasComponent,
-    DashboardLayoutComponent,
-    DashboardHomeComponent,
 
   ],
   imports: [
