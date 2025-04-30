@@ -65,7 +65,15 @@
             </select>
           </div>
         </div>
- 
+        <div class="col-md-6">
+          <label for="service" class="form-label">Servicio:</label>
+          <input
+            type="text"
+            class="form-control"
+            [value]="selectedServiceName"
+            readonly
+          />
+        </div>
         <div class="col-md-6">
           <label for="date" class="form-label">Fecha:</label>
           <input
