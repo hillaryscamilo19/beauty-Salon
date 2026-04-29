@@ -2,18 +2,30 @@
   <nav *ngIf="isLoggedIn">
     <div class="bg-background">
       <header class="border-b">
-        <div class="containerer mx-auto px-4 py-4 flex items-center justify-between">
-
+        <div
+          class="containerer mx-auto px-4 py-4 flex items-center justify-between"
+        >
           <!-- LOGO + TEXTO + icono juntos -->
-          <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="lucide lucide-scissors-icon lucide-scissors">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-scissors-icon lucide-scissors"
+            >
               <circle cx="6" cy="6" r="3" />
               <path d="M8.12 8.12 12 12" />
               <path d="M20 4 8.12 15.88" />
               <circle cx="6" cy="18" r="3" />
               <path d="M14.8 14.8 20 20" />
-            </svg></div>
+            </svg>
+          </div>
 
           <div class="flex items-center gap-2 title">
             <span>BeautySalonHillarys</span>
@@ -21,20 +33,34 @@
 
           <!-- BOTÓN aparte -->
           <div *ngIf="userName; else signInButton" class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
               {{ userName }}
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" routerLink="/dashboard/dashboard">Perfil</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item text-danger" (click)="logout()">Cerrar sesión</a></li>
+              <li>
+                <a class="dropdown-item" routerLink="/dashboard/dashboard"
+                  >Perfil</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item text-danger" (click)="logout()"
+                  >Cerrar sesión</a
+                >
+              </li>
             </ul>
           </div>
 
           <ng-template #signInButton>
-            <button routerLink="/login" class="btn btn-outline-primary">Iniciar sesión</button>
+            <button routerLink="/login" class="btn btn-outline-primary">
+              Iniciar sesión
+            </button>
           </ng-template>
-
         </div>
       </header>
     </div>
@@ -42,19 +68,19 @@
 
   <div class="home-container">
     <div class="container-main">
-      <h1>Your Beauty Journey Starts Here</h1>
-      <span>Experience premium beauty services with our expert stylists. Book your appointment today and transform your look.</span>
-    </div>
-    <div class="container-secondary">
-      <app-categoarias></app-categoarias>
+      <span class="">El anillo Perfecto</span>
+      <h1 class="">para tu momento especial.</h1
+      >
+      <h1 class="">Diseños contemporáneos con diamantes certificados, acabados premium y precios que hacen realidad tus sueños.</h1>
     </div>
   </div>
-  
+
   <main class="main-content">
-    <router-outlet></router-outlet>
+ 
+    
   </main>
 
   <footer class="app-footer">
-    <p>&copy; {{ 2025 }} Todos los derechos reservados, Hillarys Camilo❤️</p>
+    <p>&copy; {{ 2026 }} Todos los derechos reservados, Hillarys Camilo</p>
   </footer>
 </div>

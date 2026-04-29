@@ -19,6 +19,7 @@ export class CategoariasComponent {
   categoryId!: string;
   settings!: '/settings';
   appointmentForm!: FormGroup;
+  selectedServiceName: any;
 
   constructor(
     private servicesContrato: CategoryService,
