@@ -18,6 +18,9 @@ import { MessagingComponent } from './modules/dashboard/messaging/messaging.comp
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SalonListComponent } from './modules/dashboard/salon-list/salon-list.component';
 import { CategoariasComponent } from './modules/dashboard/categorias/categoarias/categoarias.component';
+import { Hero3dComponent } from './modules/home/hero3d/hero3d.component';
+import { DashboardComponent } from './modules/dashboard/dashboard/dashboard.component';
+import { LandingComponent } from './landing/landing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,9 @@ import { CategoariasComponent } from './modules/dashboard/categorias/categoarias
     MessagingComponent,
     SalonListComponent,
     CategoariasComponent,
+    Hero3dComponent,
+    DashboardComponent,
+    LandingComponent,
 
   ],
   imports: [
