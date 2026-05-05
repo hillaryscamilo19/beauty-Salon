@@ -21,6 +21,7 @@ import { CategoariasComponent } from './modules/dashboard/categorias/categoarias
 import { Hero3dComponent } from './modules/home/hero3d/hero3d.component';
 import { DashboardComponent } from './modules/dashboard/dashboard/dashboard.component';
 import { LandingComponent } from './landing/landing.component';
+import { JewelrySceneComponent } from './shared/components/jewelry-scene/jewelry-scene.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,10 +38,9 @@ import { LandingComponent } from './landing/landing.component';
     MessagingComponent,
     SalonListComponent,
     CategoariasComponent,
-    Hero3dComponent,
+
     DashboardComponent,
     LandingComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -48,8 +48,10 @@ import { LandingComponent } from './landing/landing.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    Hero3dComponent,
+    JewelrySceneComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
