@@ -71,6 +71,28 @@
   background: white;
 }
 
+
+.jewelry-landing {
+  position: relative;
+  height: 500vh;
+  overflow: hidden;
+}
+
+/* Contenido encima del canvas */
+.content-wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+/* Canvas */
+.scene-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 /* Animación flotante */
 @keyframes floatRing {
   0% {

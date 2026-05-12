@@ -12,8 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
   imports: [CommonModule, JewelrySceneComponent],
   template: `
     <div class="jewelry-landing">
-      <!-- Escena 3D de fondo -->
-      <app-jewelry-scene/>
+
       
       <!-- Contenido superpuesto -->
       <div class="content-wrapper">
@@ -75,7 +74,12 @@ gsap.registerPlugin(ScrollTrigger);
         </section>
 
       </div>
+
+
     </div>
+
+          <!-- Escena 3D de fondo -->
+      <app-jewelry-scene/>
   `,
   styleUrls: ['./hero3d.component.scss']
 })
